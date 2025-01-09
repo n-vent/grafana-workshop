@@ -75,7 +75,8 @@ A selection of published MQTT topics for a Telegraf configuration:
     "Sim1/Race/Data/Lap",
     "Sim1/Race/Data/CurrentLapTime",
     "Sim1/Race/Data/BestLapTime",
-    "Sim1/Race/Data/TrackName"
+    "Sim1/Race/Data/TrackName",
+    "Sim1/Race/Data/CarName"
   ]
 ```
 
@@ -244,6 +245,72 @@ A selection of published MQTT topics for a Telegraf configuration:
 | Sim1/Race/Data/Coordinate/2           | 0                      |
 
 
+
+## Dashboard Scenarios
+
+#### 1. Vehicle Performance 
+
+This dashboard focuses on the core performance metrics of the car.
+
+ 1.	Speed (Speed): Line chart showing the car’s speed over time.
+ 2.	Engine RPM (RPM): Line chart comparing the current RPM with the gear position (Gear).
+ 3.	Throttle Position (Throttle): Chart showing the throttle usage.
+ 4.	Brake Pedal Position (Brake): Visualizing brake activity.
+ 5.	Engine Torque (EngineTorque): Displaying the engine’s generated torque.
+ 6.	Odometer (OdometerKM): Graph showing the distance traveled.
+ 7.	Gear: Panel showing the current gear.
+
+
+#### 2. Race Statistics 
+
+This dashboard provides an overview of the car’s racing performance.
+
+1. Current Lap Time (CurrentLapTime): line chart showing the current lap time.
+2. Best Lap Time (BestLapTime): SingleStat displaying the best lap time achieved.
+3. Current Lap Number (Lap): gauge panel visualizing the current lap count.
+4. Speed (Speed): chart showing speed trends during the race.
+5. Engine RPM (RPM): chart correlating RPM with other metrics like speed.
+6. Track Name (TrackName): text panel showing the current track name.
+
+
+#### 3. Engine and Fluid Monitoring 
+
+This dashboard focuses on monitoring fluid levels and temperatures.
+
+1. Fuel Level (FuelLevel):  chart showing the remaining fuel in the tank
+2. Fuel Pressure (FuelPressure): chart visualizing fuel system pressure.
+3. Water Temperature (WaterTemp): chart showing engine cooling performance.
+4. Oil Pressure (OilPressure): chart monitoring oil pressure levels.
+5. Oil Temperature (OilTemp): chart visualizing oil temperature.
+6. Water Pressure (WaterPressure): chart displaying water pressure in the system.
+
+
+#### 4. Tire and Brake Monitoring 
+
+This dashboard monitors the tires and brakes of the car.
+
+1. Tire Temperature (TyreTemp for all wheels): Heatmap showing temperature distribution across all tires.
+2. Tire Revolutions Per Second (TyreRPS for all wheels): Line chart showing tire rotation speeds.
+3. Brake Temperature (BrakeTempCelsius for all wheels): chart visualizing brake temperatures.
+4. Tire Air Pressure (AirPressure for all wheels): chart showing air pressure in the tires.
+5. Front vs. Rear Tires (Temperature): comparison chart highlighting temperature differences between front and rear tires.
+6. Brake Temperature Overview: Gauge panel warning of critical brake temperatures.
+
+
+#### 5. Vehicle Dynamics 
+
+This dashboard provides insights into the car’s dynamics while in motion.
+
+1. Acceleration (WorldAcceleration): chart displaying acceleration values in X, Y, and Z directions.
+2. Steering Input (Steering): chart visualizing steering inputs over time.
+3. Orientation (Orientation in X, Y, Z): visualization showing the car’s orientation.
+4. Clutch Position (Clutch): chart showing clutch usage over time.
+5. Engine Speed (EngineSpeed): chart correlating engine speed with acceleration.
+6. Environmental Conditions: displays ambient and track temperatures (AmbientTemperature, TrackTemperature).
+7. Speed (Speed): chart showing speed trends during the race.
+
+
+
 ## Helpful Links
 
 ### Telegraf
@@ -263,3 +330,4 @@ A selection of published MQTT topics for a Telegraf configuration:
 [InfluxDB Documentation](https://docs.influxdata.com/telegraf/latest/)
 
 [InfluxDB Image on Docker Hub](https://hub.docker.com/_/influxdb)
+

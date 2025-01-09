@@ -3,8 +3,6 @@ services:
       image: telegraf:latest
       container_name: telegraf
       restart: always
-      environment:
-        - INFLUX_TOKEN=replaceMe
       volumes:
         - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
       depends_on:
@@ -21,7 +19,7 @@ services:
       environment:
         - INFLUXDB_DB=influx
         - INFLUXDB_ADMIN_USER=admin
-        - INFLUXDB_ADMIN_PASSWORD=admin
+        - INFLUXDB_ADMIN_PASSWORD=admin1234
       ports:
         - '8086:8086'
       volumes:
