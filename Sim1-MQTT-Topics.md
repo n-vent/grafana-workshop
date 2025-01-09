@@ -1,6 +1,24 @@
 ## Driving Simulator Telemetry - MQTT Topics
 Here you will find an overview of all telemetry data published by the driving simulator via MQTT:
 
+### Race
+| Topic                                 | Example Value          |
+|---------------------------------------|------------------------|
+| Sim1/Race/Data/InRace                 | True                   |
+| Sim1/Race/Data/GameName               | Project Cars 2         |
+| Sim1/Race/Data/CarName                | Porsche 919 Hybrid     |
+| Sim1/Race/Data/TrackName              | Nurburgring            |
+| Sim1/Race/Data/Lap                    | 3                      |
+| Sim1/Race/Data/CurrentLapTime         | 99.99829               |
+| Sim1/Race/Data/BestLapTime            | 398.01025              |
+| Sim1/Race/Data/LastLapTime            | 398.01025              |
+| Sim1/Race/Data/Position               | 0                      |
+| Sim1/Race/Data/TotalPositions         | 0                      |
+| Sim1/Race/Data/Coordinate/0           | 0                      |
+| Sim1/Race/Data/Coordinate/1           | 0                      |
+| Sim1/Race/Data/Coordinate/2           | 0                      |
+
+
 ### Car
 | Topic                                 | Example Value          |
 |---------------------------------------|------------------------|
@@ -147,21 +165,5 @@ Here you will find an overview of all telemetry data published by the driving si
 | Sim1/Car/Data/WindDirectionY          | 33                     |
 | Sim1/Car/Data/CurrentRealTime         | 2024-11-20 13:22:32:48 |
 
-### Race
-| Topic                                 | Example Value          |
-|---------------------------------------|------------------------|
-| Sim1/Race/Data/InRace                 | True                   |
-| Sim1/Race/Data/GameName               | Project Cars 2         |
-| Sim1/Race/Data/CarName                | Porsche 919 Hybrid     |
-| Sim1/Race/Data/TrackName              | Nurburgring            |
-| Sim1/Race/Data/Lap                    | 3                      |
-| Sim1/Race/Data/CurrentLapTime         | 99.99829               |
-| Sim1/Race/Data/BestLapTime            | 398.01025              |
-| Sim1/Race/Data/LastLapTime            | 398.01025              |
-| Sim1/Race/Data/Position               | 0                      |
-| Sim1/Race/Data/TotalPositions         | 0                      |
-| Sim1/Race/Data/Coordinate/0           | 0                      |
-| Sim1/Race/Data/Coordinate/1           | 0                      |
-| Sim1/Race/Data/Coordinate/2           | 0                      |
 
 
