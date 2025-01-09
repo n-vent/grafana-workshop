@@ -2,7 +2,7 @@
 
 This repository provides the materials for the workshop *Grafana & Co: Visualization and monitoring of time series data with Grafana, Telegraf and InfluxDB*.
 
-Please download or clone this repository to join the workshop.
+Please download or clone this repository to participate in the workshop.
 
 ## Commands
 Start and run the TIG-stack defined in [tig-stack/docker-compose.yaml](tig-stack/docker-compose.yaml):
@@ -19,6 +19,8 @@ docker compose restart telegraf
 ```
 
 ## Web-Interfaces
+
+The web interfaces of the TIG-stack can be accessed via the following ports:
 
 [InfluxDB http://localhost:8086](http://localhost:8086)
 
@@ -81,6 +83,8 @@ A selection of published MQTT topics for a Telegraf configuration:
 ```
 
 ## All MQTT Topics
+Here you will find an overview of all telemetry data published by the driving simulator via MQTT:
+
 ### Car
 | Topic                                 | Example Value          |
 |---------------------------------------|------------------------|
